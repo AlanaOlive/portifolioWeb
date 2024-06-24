@@ -1,0 +1,119 @@
+#div-menu{
+    width: 70%;
+    height: 150px;
+    margin: 0 auto;
+    padding: 2em 0em;
+    background: linear-gradient(to bottom, #ddd7fe  30%, #f71a92    80%);
+}
+
+#list-menu{
+    list-style: none;
+    flex-direction: row;
+    text-align: center;
+    font-family: fantasy;
+    
+}
+
+body{
+    color: #542ecf ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.item-menu{
+    width: 150px;
+    height: 50px;
+    background-color: #ffc656  ;    
+    margin: 30px;
+    padding: 5px;    
+    display: inline-block;
+    
+}
+
+.item-menu a{
+    top: 30%;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+#main-content{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+
+}
+
+#projects{
+    display: inline-grid;
+    height: fit-content;
+}
+
+#name-and-biography{
+    float: left;
+    width: 60%;
+    height: auto;
+}
+#name-and-biography img{
+    float: right;
+}
+#personal-image{
+    float: right; 
+    width: 40%;
+    height: fit-content;
+}
+
+#personal-image img{
+    float: right;
+    display: block;
+}
+
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.cards-class{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 5 - 60px);
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: white;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, #ddd7fe  80%);
+}
+
+.cards-class:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.cards-class img{
+    width: 35%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .cards-class {
+        width: 100%;
+    }
+    #div-menu{
+        width: 100%;
+    }
+    #personal-infos{
+        width: 100%;
+    }
+}
+
+#footer-content{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, #ffc656   80%);
+}
