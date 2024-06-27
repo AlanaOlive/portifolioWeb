@@ -1,60 +1,100 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../styles/index.css" rel="stylesheet" type="text/css" media="all">
-    <script src="../scripts/config.js"></script>
-    <title>Portifolio pessoal</title>
-</head>
-<body>
-    <div id="main-content">
-        <div id="login-container">
-            <h2>Login</h2>
-            <form id="login-form">
-                <label for="username">Usuário:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Entrar</button>
-            </form>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../styles/index.css" rel="stylesheet" type="text/css" media="all">
+        <script src="../scripts/config.js"></script>
+        <title>Portifolio pessoal</title>
+    </head>
+    <body>        
+
+        <div id="main-div">
+            <div class="menu" id="menu-div">
+                <label class="menu-icon" id="menu-button">&#9776;</label>
+                <div id="div-list-menu">
+                    <ul class="list-menu">
+                        <li class="item-menu"><a href="../index.html">INÍCIO</a></li>
+                        <li class="item-menu"><a href="config.html">CONFIGURAÇÕES</a></li>
+                    </ul>
+                </div>
             
-        </div>
-    
-        <div id="admin-panel" style="display: none;">
-            <h2>Painel Administrativo</h2>
-            <div id="edit-personal-info">
-                <h3>Editar Informações Pessoais</h3>
-                <button id="edit-personal-info-btn">Editar</button>
-                <div id="personal-info-form" style="display: none;">
-                    <label for="fullname">Nome Completo:</label>
-                    <input type="text" id="fullname">
-                    <label for="bio">Biografia:</label>
-                    <textarea id="bio"></textarea>
-                    <label for="profile-pic">Foto Profissional (URL):</label>
-                    <input type="text" id="profile-pic">
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email">
-                    <label for="phone">Telefone:</label>
-                    <input type="tel" id="phone">
-                    <label for="social-links">Links para Redes Sociais:</label>
-                    <input type="text" id="social-links">
-                    <button id="save-personal-info-btn">Salvar</button>
+            </div>
+
+            <div id="main-content">
+                <div id="login-container">
+                    
+                    <form id="login-form">
+                        <img id="login-img" src="../resources/user.png">
+                        <h2>Login</h2>
+                        <label for="username">Usuário:</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                        <button type="submit">Entrar</button>
+                    </form>
+                    
+                </div>
+            
+                <div id="admin-panel" style="display: none;">
+                    <h2>Painel Administrativo</h2>
+                    <div id="edit-personal-info">
+                        <h3>Editar Informações Pessoais</h3>
+                        <button id="edit-personal-info-btn">Editar</button>
+                        <div id="personal-info-form" style="display: none;">
+                            <div class="labels-form">
+                                <label for="fullname">Nome Completo:</label>
+                                <label for="bio">Biografia:</label>
+                                <label for="profile-pic">Foto Profissional (URL):</label>                                
+                                <label for="email">E-mail:</label>
+                                <label for="phone">Telefone:</label>
+                                <label for="social-links">Links para Redes Sociais:</label>
+                            </div>
+                            
+                            <div class="inputs-form">
+                                <input type="text" id="fullname">
+                                <textarea id="bio"></textarea>
+                                <input type="text" id="profile-pic">
+                                <input type="email" id="email">
+                                <input type="tel" id="phone">
+                                <input type="text" id="social-links">
+                            </div>
+                            
+                            <button id="save-personal-info-btn">Salvar</button>
+                        </div>
+                    </div>
+            
+                    <div id="edit-projects">
+                        <h3>Editar Projetos</h3>
+                        <div id="projects-list"></div>
+
+                        <div id="personal-projects-form" style="display: none;">
+                            <div class="labels-form">
+                                <label for="Titulo">Titulo:</label>
+                                <label for="Descricao">Descricao:</label>
+                                
+                            </div>
+                            
+                            <div class="inputs-form">
+                                <input type="text" id="title-text">
+                                <textarea id="description"></textarea>                                
+                            </div>
+                            
+                            <button id="save-projects">Salvar</button>
+                        </div>
+                        <button id="edit-projects-btn">Editar</button>
+                    </div>
+            
+                    <div id="edit-skills">
+                        <h3>Editar Habilidades</h3>                
+                        <div id="skills-list"></div>
+                        <button id="edit-habilitys-btn">Editar</button>
+                    </div>
+            
+                    <button id="logout-btn">Sair</button>
                 </div>
             </div>
-    
-            <div id="edit-projects">
-                <h3>Editar Projetos</h3>
-                <div id="projects-list"></div>
-                <button id="edit-projects-btn">Editar</button>
-            </div>
-    
-            <div id="edit-skills">
-                <h3>Editar Habilidades</h3>                
-                <div id="skills-list"></div>
-                <button id="edit-habilitys-btn">Editar</button>
-            </div>
-    
-            <button id="logout-btn">Sair</button>
-        </div>
-    </div>
-</body>
+        </div>        
+    </body>
+    <script src="../scripts/menu.js"></script>
+</html>

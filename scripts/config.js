@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const savePersonalInfoBtn = document.getElementById('save-personal-info-btn');
     const projectsList = document.getElementById('projects-list');
     const skillsList = document.getElementById('skills-list');
-
+    const editProjects = document.getElementById('edit-projects-btn');
+    const formProjects = document.getElementById('personal-projects-form');
+    const saveProjects = document.getElementById('save-projects');
 
     const username = 'admin';
     const password = 'admin';
@@ -29,50 +31,58 @@ document.addEventListener('DOMContentLoaded', function() {
         location.reload();
     });
 
-    editPersonalInfoBtn.addEventListener('click', function() {
-
+    editPersonalInfoBtn.addEventListener('click', function() {        
         personalInfoForm.style.display = 'block';
-
-        document.getElementById('fullname').value = 'Nome do Administrador';
-        document.getElementById('bio').value = 'Descrição do Administrador';
-        document.getElementById('profile-pic').value = 'https://via.placeholder.com/150';
-        document.getElementById('email').value = 'admin@example.com';
-        document.getElementById('phone').value = '(11) 98765-4321';
-        document.getElementById('social-links').value = 'https://www.linkedin.com, https://twitter.com';
+        editPersonalInfoBtn.style.display = 'none';
+        
     });
 
     savePersonalInfoBtn.addEventListener('click', function() {
+        var name = document.createElement('h3');
+        name.innerHTML = document.getElementById('fullname').value;
+        var bio = document.createElement('p');
+        bio.innerHTML = document.getElementById('bio').value;
+        var email = document.createElement('p');
+        email.innerHTML = document.getElementById('email').value;
+        var socialLinks = document.createElement('p');
+        socialLinks.innerHTML = document.getElementById('social-links').value;
+        
+        var divPersonalInfo = document.getElementById('edit-personal-info');
+        divPersonalInfo.appendChild(name);
+        divPersonalInfo.appendChild(bio);
+        divPersonalInfo.appendChild(email);
+        divPersonalInfo.appendChild(socialLinks);      
+
+        personalInfoForm.style.display = 'none';
+        savePersonalInfoBtn.style.display = 'block';
         alert('Informações pessoais salvas com sucesso!');
+
     });
 
-    const projectsData = [
-        { id: 1, title: 'Projeto 1', description: 'Descrição do Projeto 1', imageUrl: 'https://via.placeholder.com/150' },
-        { id: 2, title: 'Projeto 2', description: 'Descrição do Projeto 2', imageUrl: 'https://via.placeholder.com/150' },
-    ];
+    editProjects.addEventListener('click', function(){
+        formProjects.style.display = 'block';
+        editProjects.style.display = 'none';        
 
-    const skillsData = [
-        { id: 1, skill: 'Habilidade 1', description: 'Descrição da Habilidade 1' },
-        { id: 2, skill: 'Habilidade 2', description: 'Descrição da Habilidade 2' },
-    ];
-
-    projectsData.forEach(project => {
-        const projectDiv = document.createElement('div');
-        projectDiv.innerHTML = `
-            <h4>${project.title}</h4>
-            <p>${project.description}</p>
-            <img src="${project.imageUrl}" alt="${project.title}">
-            <hr>
-        `;
-        projectsList.appendChild(projectDiv);
     });
 
-    skillsData.forEach(skill => {
-        const skillDiv = document.createElement('div');
-        skillDiv.innerHTML = `
-            <h4>${skill.skill}</h4>
-            <p>${skill.description}</p>
-            <hr>
-        `;
-        skillsList.appendChild(skillDiv);
+
+    saveProjects.addEventListener('click', function(){
+        var titulo = document.getElementById('title-text');
+        var descricao = document.getElementById('description');
+        
+        var pTitulo = document.createElement('h3');
+        pTitulo.innerHTML =  titulo.value;
+
+        projectsList.appendChild(pTitulo);
+
+        var pDescricao = document.createElement('p');
+        pDescricao.innerHTML = descricao.value;
+
+        projectsList.appendChild(pDescricao);
+
+        formProjects.style.display = 'none';
+        saveProjects.style.display = 'block';
+        alert('Projeto salvo com sucesso');
     });
+
 });

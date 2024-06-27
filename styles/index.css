@@ -63,7 +63,7 @@ a{
 
 #projects{
     display: inline-grid;
-    height: fit-content;
+    height: auto;
 }
 
 #name-div{
@@ -117,21 +117,22 @@ a{
 
 #contacts-infos{
     flex-direction: row;
-    height: 80px;
-
+    display: flex;
+    width: 15%;
+    float: right;
 }
 
-#contacts-infos p{
+#footer-content p{
     margin-left: 30px;
     color: #fff;
 }
 
 #contacts-infos img{
-    float: right;
-    height: 50px;
-    margin-right: 10px;
+    height: 40px;
+    margin-top: 10px;
     margin-bottom: 10px;
-
+    margin-right: 10px;
+    float: right;
 }
 
 @media (max-width: 768px) {
@@ -157,9 +158,11 @@ a{
     }
     #contacts-infos img{
         height: 50px;
-        margin-right: 30px;
-        margin-bottom: 5px;
+
     }    
+    #contacts-infos{
+        width: 40%;
+    }
 
     .align-itens-mobile{
         margin: 20px;
@@ -171,19 +174,44 @@ a{
     width: 100px;
     height: auto;
 }
+
 #login-container, #admin-panel {
     background-color: #fff;
+    width: calc(100% / 1 - 60px);
+    margin: 10px;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+    box-shadow: 0 0 10px #6c54f3;
+    width: 100%;
+}
+
+.labels-form{
+    width: 50%;
+    float: left;
+}
+
+.labels-form  label{
+    width: 100%;
+    width: 100%;
+    display: block;
+    height: 50px;
+}
+
+.inputs-form{
+    width: 50%;
+    float: right;
+}
+
+.inputs-form input{
+    height: 20px;
+    width: 90%;
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
 }
 
 label {
@@ -195,20 +223,22 @@ input, textarea {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    width: 100%;
+    width: 300px
 }
 
 button {
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #ffc655;
+    color: #542ecf;
     border: none;
     cursor: pointer;
-    border-radius: 3px;
-    width: 100%;
+    border-radius: 5px;
+    width: 300px;
+    height: 60px;
     margin-top: 10px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #6c54f3;
+    color: #fff;
 }
