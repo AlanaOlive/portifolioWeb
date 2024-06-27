@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/index.css" rel="stylesheet" type="text/css" media="all">
-    <script src="/scripts/config.js"></script>
+    <link href="styles/index.css" rel="stylesheet" type="text/css" media="all">       
     <title>Portifolio pessoal</title>
 </head>
-<body>
-    
-    <div id="main-div">
-        <div id="header-page">
-            <div id="div-menu">
-                <ul id="list-menu">
-                    <li class="item-menu"><a href="index.html">INÍCIO</a></li>
-                    <li class="item-menu"><a href="">PERFIL</a></li>
-                    <li class="item-menu"><a href="/src/config.html">CONFIGURAÇÕES</a></li>
-                </ul>
-            </div>            
-        </div>
+<body>    
 
-        <div id="main-content">
+    <div id="main-div">
+        <div class="menu" id="menu-div">
+            <label class="menu-icon" id="menu-button">&#9776;</label>
+            <div id="div-list-menu">
+                <ul class="list-menu">
+                    <li class="item-menu"><a href="index.html">INÍCIO</a></li>
+                    <li class="item-menu"><a href="src/config.html">CONFIGURAÇÕES</a></li>
+                </ul>
+            </div>
+           
+        </div>
+        
+        <div id="main-content">            
+
             <div id="personal-infos">
                 <div id="name-div">
-                    <h2 id="name">Alana Paula de Oliveira Carvalho</h2>                    
+                    <h2 id="name" class="align-itens-mobile">Alana Paula de Oliveira Carvalho</h2>                    
                 </div>  
                 <div id="personal-image">
-                    <img src="resources/perfil.jpeg" width="200px" height="auto">
+                    <img src="resources/perfil.jpeg" width="200px" height="auto" class="align-itens-mobile">
                 </div>         
-                <p id="biography">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                <p id="biography" class="align-itens-mobile">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
@@ -36,7 +37,7 @@
             </div>
 
             <div id="projects">
-                <h1 id="title-projects">Projetos</h1>
+                <h1 id="title-projects" class="align-itens-mobile">Projetos</h1>
                 <div id="projects-conteiner" class="conteiner">
                     <div id="card1-projects" class="cards-class">
                         <img decoding="async" src="resources/icon1.png" alt="imagem card">
@@ -66,43 +67,41 @@
             </div>
 
             <div id="habilities">
-                <h1 id="title-habilities">Habilidades</h1>
+                <h1 id="title-habilities" class="align-itens-mobile">Habilidades</h1>
                 <div id="hablities-conteiner" class="conteiner">
                     <div id="card1-habilities" class="cards-class">
                         <img decoding="async" src="resources/icon5.png" alt="imagem card">
                         <h3>HTML</h3>
-                        <!--<p>Gerenciando banco de dados Postgres.</p>-->
                     </div>
 
                     <div id="card2-habilities" class="cards-class">
                         <img decoding="async" src="resources/icon6.png" alt="imagem card">
                         <h3>CSS</h3>
-                        <!--<p>Automatizando testes de software com Appim.</p>-->
                     </div>
 
                     <div id="card3-habilities" class="cards-class">
                         <img decoding="async" src="resources/icon7.png" alt="imagem card">
                         <h3>JavaScript</h3>
-                        <!--<p>Aplicando conceitos de desenvolvimento web.</p>-->
                     </div>
 
                     <div id="card4-habilities" class="cards-class">
                         <img decoding="async" src="resources/icon8.png" alt="imagem card">
                         <h3>Dart/Flutter</h3>
-                        <!--<p>Aplicando conceitos de desenvolvimento web.</p>-->
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="footer-content">
-            <div id="contacts-infos" >
+            <div id="contacts-infos" class="menu">
                 <p>Contate-me</p>
-                <img class="item-footer" src="resources/icon9.png">
-                <img class="item-footer" src="resources/icon10.png">
-                <img class="item-footer" src="resources/icon11.png">
+                <img class="item-menu" src="resources/icon9.png">
+                <img class="item-menu" src="resources/icon10.png">
+                <img class="item-menu" src="resources/icon11.png">
             </div>
         </div>
     </div>
 </body>
+<script src="scripts/menu.js"></script>
+<script src="scripts/config.js"></script>
 </html>
