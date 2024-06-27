@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../styles/index.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/scripts/config.js"></script>
+    <title>Portifolio pessoal</title>
+</head>
+<body>
+    <div id="main-content">
+        <div id="login-container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Entrar</button>
+            </form>
+            
+        </div>
+    
+        <div id="admin-panel" style="display: none;">
+            <h2>Painel Administrativo</h2>
+            <div id="edit-personal-info">
+                <h3>Editar Informações Pessoais</h3>
+                <button id="edit-personal-info-btn">Editar</button>
+                <div id="personal-info-form" style="display: none;">
+                    <label for="fullname">Nome Completo:</label>
+                    <input type="text" id="fullname">
+                    <label for="bio">Biografia:</label>
+                    <textarea id="bio"></textarea>
+                    <label for="profile-pic">Foto Profissional (URL):</label>
+                    <input type="text" id="profile-pic">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone">
+                    <label for="social-links">Links para Redes Sociais:</label>
+                    <input type="text" id="social-links">
+                    <button id="save-personal-info-btn">Salvar</button>
+                </div>
+            </div>
+    
+            <div id="edit-projects">
+                <h3>Editar Projetos</h3>
+                <div id="projects-list"></div>
+                <button id="edit-projects-btn">Editar</button>
+            </div>
+    
+            <div id="edit-skills">
+                <h3>Editar Habilidades</h3>                
+                <div id="skills-list"></div>
+                <button id="edit-habilitys-btn">Editar</button>
+            </div>
+    
+            <button id="logout-btn">Sair</button>
+        </div>
+    </div>
+</body>
