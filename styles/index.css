@@ -58,7 +58,6 @@ a{
     width: 70%;
     height: auto;
     margin: 0 auto;
-
 }
 
 #projects{
@@ -171,7 +170,7 @@ a{
 
 #img-project img{
     float:left;
-    width: 100px;
+    width: 200px;
     height: auto;
 }
 
@@ -241,4 +240,19 @@ button {
 button:hover {
     background-color: #6c54f3;
     color: #fff;
+}
+
+button#back-to-top-btn {
+    display: none;
+    width: 70px;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: #ffc655;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 100px;
+    font-size: 16px;
 }
